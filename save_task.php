@@ -13,7 +13,10 @@ if (isset($_POST['save_task'])){
         die("Query Fail");
     }
 
-    echo 'save';
+    $_SESSION['message'] = 'Task save OK';
+    $_SESSION['message_type'] = 'success';
+
+    header("Location: index.php");
 }
 
 ?>
